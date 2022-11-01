@@ -1,4 +1,16 @@
-# Touristplacewithangular14
+# tourist-place-app-with-angular14
+A small tourist place application with angular 14 framework
+
+Details
+---
+* This is an application where user can add, edit, delete tourist places.
+* This application developed with Angular(v14) and rxjs.
+* This application calls localhost api, which developed <a href="https://github.com/Reayz/tourist-place-application">here</a> to get/update the tourist places.
+
+<br/>
+<br/>
+<br/>
+<br/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
