@@ -1,0 +1,45 @@
+<div class="NewPlace">
+    <form [formGroup]="newPlaceForm" (ngSubmit)="AddNewPlace()">
+        <div class='TitleDiv'>
+            <label class='Title'>Add a new Tourist Place</label>
+        </div>
+        <div>
+            <label>Name: </label>
+            <input type="text" formControlName="name" />
+            <label *ngIf="field['name'].errors && field['name'].errors['required']" class="RedText">Please enter place
+                name</label>
+        </div>
+        <div>
+            <label>Address: </label>
+            <input type="text" formControlName="address" />
+            <label *ngIf="field['address'].errors && field['address'].errors['required']" class="RedText">Please enter
+                place address</label>
+        </div>
+        <div>
+            <label>Rating: </label>
+            <input type="number" formControlName="rating" min="1" max="5" />
+            <label *ngIf="field['rating'].errors && field['rating'].invalid" class="RedText">Range 1 to 5</label>
+        </div>
+        <div>
+            <label>Type: </label>
+            <input type="text" formControlName="type" />
+            <label *ngIf="field['type'].errors && field['type'].errors['required']" class="RedText">Please enter place
+                type</label>
+        </div>
+        <div>
+            <label>Picture: </label>
+            <input type="file" (change)="onFileChange($event)" />
+            <label *ngIf="field['picture'].errors && field['picture'].errors['required']; else ElseBlock"
+                class="RedText">Please enter place picture</label>
+            <ng-template #ElseBlock><label class="FileLabel">Picture has added</label></ng-template>
+        </div>
+        <div class='Buttons'>
+            <button [disabled]="newPlaceForm.invalid" type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <div class='BackBtnDiv'>
+        <a class="BackBtn" routerLink="/dashboard">Back to Tourist Place list</a>
+    </div>
+</div>

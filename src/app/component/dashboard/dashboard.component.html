@@ -1,0 +1,38 @@
+<div class="LoadingPanel" *ngIf="stillLoading; else LoadingComplete">
+    <img class="LoadingImage" src="../../../assets/loading.jpg" alt="loading image" /> <br />
+    <label>Places are loading...</label>
+</div>
+
+<ng-template #LoadingComplete>
+    <div class="Dashboard">
+        <input class="SearchBox" [(ngModel)]="searchText" type="text" placeholder="Enter name to search" />
+
+        <table class='PlacesTable'>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Address</td>
+                    <td>Rating</td>
+                    <td>Type</td>
+                    <td>Picture</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let place of places | filterPlaces : searchText : 'name'">
+                    <td>{{ place.name }}</td>
+                    <td>{{ place.address }}</td>
+                    <td>{{ place.rating }}</td>
+                    <td>{{ place.type }}</td>
+                    <td><img class='PlaceImage' src={{place.picture}} alt='Pictures' /></td>
+                    <td>
+                        <button type="button" class="UpdateBtn" (click)="updatePlace(place.placeID)">Update</button>
+                        <button type="button" class="DeleteBtn" (click)="deletePlace(place.placeID)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="CreateBtn" (click)="createNewPlace()">Create New Tourist Place</button>
+    </div>
+</ng-template>

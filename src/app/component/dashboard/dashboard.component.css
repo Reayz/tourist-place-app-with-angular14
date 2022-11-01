@@ -1,0 +1,101 @@
+.LoadingPanel {
+    margin: 100px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.LoadingImage {
+    width: 50px;
+    height: 50px;
+}
+
+.Dashboard {
+    margin: 30px 200px;
+    text-align: left;
+}
+
+.PlacesTable {
+    height: auto;
+    border: black 2px solid;
+    text-align: center;
+}
+
+.PlacesTable thead td {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+    font-weight: bold;
+    min-width: 150px;
+}
+
+.PlacesTable tbody td {
+    height: 100px;
+    min-width: 150px;
+}
+
+.PlacesTable tbody tr:nth-child(odd) td {
+    background-color: white;
+    color: black;
+}
+
+.PlacesTable tbody tr:nth-child(even) td {
+    background-color: rgb(252, 237, 237);
+    color: black;
+}
+
+.PlacesTable button {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100px;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px grey;
+}
+
+.PlaceImage {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 5px;
+}
+
+.UpdateBtn {
+    background-color: rgb(108, 143, 206) !important;
+    right: 39%;
+}
+
+.DeleteBtn {
+    background-color: rgb(219, 80, 80) !important;
+    right: 31%;
+}
+
+.SearchBox {
+    background-color: rgb(252, 237, 237);
+    color: gray;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px 15px;
+    border: none;
+    box-shadow: -2px -2px gray;
+    margin-bottom: 15px;
+}
+
+.CreateBtn {
+    cursor: pointer;
+    background-color: rgb(108, 143, 206);
+    color: white;
+    height: 50px;
+    width: 20%;
+    border-radius: 10px;
+    padding: 7px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px grey;
+    margin-top: 15px;
+}
